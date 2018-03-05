@@ -31,7 +31,7 @@ class Game {
   }
   //循环绘制画面
   runloop() {
-    log(window.fps)
+    //log(window.fps)
     var actions = Object.keys(this.actions)
     for (var i=0;i<actions.length;i++){
       let key = actions[i]
@@ -57,7 +57,7 @@ class Game {
   }
   runWithScene(s) {
     this.scene = s
-    log(this)
+    //log(this)
     this.runloop()
 
   }
@@ -75,7 +75,7 @@ class Game {
             g.images[name] = img
             // 所有图片都成功载入之后, 调用 run
             loads.push(1)
-            log('load images', loads.length, names.length)
+            log('load images', loads.length, names.length,g.images[name])
             if (loads.length == names.length) {
                 log('load images', g.images)
                 g.__start()
